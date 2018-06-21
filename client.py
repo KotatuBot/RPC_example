@@ -27,7 +27,7 @@ def query(numbers):
 
     url = "http://localhost:4000/jsonrpc"
     headers = {'content-type': 'application/json'}
-    # Example echo method
+    # call calculation method
     payload = {
 	"method": "calculation",
 	"params": {"x":numbers},
@@ -62,13 +62,13 @@ def main():
     X_value = []
     Y_value = []
 
-    # 1回目
+    # 1 count
     x = first()
     X_value.append(x)
     y = query(x)
     Y_value.append(y)
 
-    # 449回
+    # 449 count
     for count in range(0,499):
         X_value.append(y)
         y = query(y)
