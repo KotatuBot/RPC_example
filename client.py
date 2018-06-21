@@ -49,8 +49,11 @@ def scatter_plot(x,y):
     """
 
     plt.scatter(x,y,c="steelblue")
-    plt.xlabel("X")
-    plt.ylabel("Y")
+    plt.xlim(0.0, 1.0)
+    plt.ylim(0.0, 1.0)
+    plt.title(r'$3.8x(1-x)$')
+    plt.xlabel(r"$X$")
+    plt.ylabel(r"$Y$")
     plt.savefig("result.eps")
 
 def main():
